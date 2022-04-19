@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Smart alarm clock</string>
+    <string name="_00">00</string>
+    <string name="alarm_view_text_1">Умный будильник. Который срабатывает через определенное время после восхода солнца</string>
+    <string name="alarm_view_text_2">Для определения времени восхода солнца укажите свое местоположение</string>
+    <string name="alarm_view_text_3">Введите свой город</string>
+    <string name="alarm_view_text_4">Определить локацию автоматически</string>
+    <string name="alarm_view_text_5">Расвет в 00:00</string>
+    <string name="alarm_view_text_6">Установите время срабатывания будильника после рассвета</string>
+    <string name="hour_input">Часы</string>
+    <string name="alarm_view_text_7">:</string>
+    <string name="minute_input">Минуты</string>
+    <string name="alarm_view_text_8">Установить будильник</string>
+    <string name="stop">Stop</string>
+</resources>

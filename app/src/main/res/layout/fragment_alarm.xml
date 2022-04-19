@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:text="@string/alarm_view_text_1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timeTextView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:text="@string/alarm_view_text_2"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeTextView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editLocation"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="80dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/alarm_view_text_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeTextView5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:nextFocusLeft="@id/editHourInput"
+            android:nextFocusUp="@id/editHourInput"
+            android:paddingBottom="1dp"
+            android:textSize="20sp"
+            app:counterEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/searchLocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:src="@drawable/ic_explore"
+        app:layout_constraintBottom_toBottomOf="@id/editLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/editLocation"
+        app:layout_constraintTop_toTopOf="@id/editLocation"
+        tools:ignore="ContentDescription" />
+
+    <CheckBox
+        android:id="@+id/checkboxLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editLocation" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_view_text_4"
+        app:layout_constraintBottom_toBottomOf="@id/checkboxLocation"
+        app:layout_constraintStart_toEndOf="@id/checkboxLocation"
+        app:layout_constraintTop_toTopOf="@id/checkboxLocation" />
+
+    <TextView
+        android:id="@+id/timeTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/alarm_view_text_5"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkboxLocation" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeTextView3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/timeTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="24dp"
+                android:paddingTop="28dp"
+                android:paddingEnd="24dp"
+                android:text="@string/alarm_view_text_6"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editHour"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="96dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/hour_input"
+                app:layout_constraintEnd_toStartOf="@id/editMinute"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/timeTextView2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editHourInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:nextFocusLeft="@id/editHourInput"
+                    android:nextFocusUp="@id/editHourInput"
+                    android:paddingBottom="1dp"
+                    android:text="@string/_00"
+                    android:textSize="45sp"
+                    app:counterEnabled="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/alarm_view_text_7"
+                android:textSize="45sp"
+                app:layout_constraintBottom_toBottomOf="@id/editHour"
+                app:layout_constraintEnd_toStartOf="@id/editMinute"
+                app:layout_constraintStart_toEndOf="@id/editHour"
+                app:layout_constraintTop_toTopOf="@id/editHour" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/editMinute"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="96dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:hint="@string/minute_input"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/editHour"
+                app:layout_constraintTop_toBottomOf="@id/timeTextView2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:minEms="0"
+                    android:paddingBottom="1dp"
+                    android:text="@string/_00"
+                    android:textSize="45sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/setAlarmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:enabled="false"
+                android:text="@string/alarm_view_text_8"
+                app:layout_constraintEnd_toEndOf="@id/editMinute"
+                app:layout_constraintStart_toStartOf="@id/editHour"
+                app:layout_constraintTop_toBottomOf="@id/editHour" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/timeTextView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardTime"
+        tools:text="@tools:sample/lorem" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
